@@ -1,0 +1,31 @@
+USE [AdventureWorks2017]
+
+SELECT * FROM [HumanResources].[Department]
+
+-- SHOW ME ALL THE DEPARTMENT NAMES
+SELECT Name FROM [HumanResources].[Department]
+
+-- SHOW ME ALL THE GROUPS
+SELECT GROUPNAME FROM [HumanResources].[Department]
+
+-- SHOW ME ALL DISTINCT GROUP NAMES
+SELECT DISTINCT GROUPNAME FROM [HumanResources].[Department]
+
+-- SHOW ME ALL DEPARTMENTS WHO ARE APART OF MANUFACTURING
+SELECT NAME, GROUPNAME FROM [HumanResources].[Department]
+WHERE GROUPNAME LIKE 'Manufacturing'
+
+-- GIVE ME ALL THE EMPLOYEES FROM THE EMPLOYEES TABLE
+SELECT * FROM [HumanResources].[Employee]
+
+-- GIVE ME A LIST OF ALL EMPLOYEES WITH ORGLVL = 2
+SELECT * FROM [HumanResources].[Employee] WHERE OrganizationLevel = 2
+
+-- GIVE ME A LIST OF ALL EMPLOYEES WITH ORGLVL = 2 OR 3
+SELECT * FROM [HumanResources].[Employee] WHERE OrganizationLevel IN (2,3)
+
+-- GIVE ME A LIST WHERE EMPLOYEE IS FACILITIES MANAGER
+SELECT * FROM [HumanResources].[Employee] WHERE JobTitle like 'Facilities Manager'
+
+-- GIVE ME ALL THE EMPLOYEES WHO HAVE THE WORD MANAGER IN THEIR TITLE
+SELECT * FROM [HumanResources].[Employee] WHERE JobTitle LIKE '%MANAGER'
