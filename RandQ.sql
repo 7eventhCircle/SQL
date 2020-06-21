@@ -16,4 +16,3 @@ WHERE BusinessEntityID IN (4,16)
 
 -- SHOW RATE THATS GREATER THAN 10000 AND MOD DATE 2007
 SELECT * FROM [HumanResources].[EmployeePayHistory] WHERE Rate > 10.0000 AND BusinessEntityID = 16 AND ModifiedDate = '2007-12-06 00:00:00.000'
-
